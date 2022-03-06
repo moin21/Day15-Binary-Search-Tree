@@ -28,7 +28,7 @@ public class BinaryTreeMain {
 		obj.preorder();
 		System.out.print("\nIn order : ");
 		obj.inorder();
-
+		obj.size();
 	}
 
 }
