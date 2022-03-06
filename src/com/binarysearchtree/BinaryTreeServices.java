@@ -40,7 +40,6 @@ public class BinaryTreeServices {
 			System.out.print(" inserted " + node.data + " in the right \n");
 			root.right = insertAll(root.right, node);
 		}
-
 		return root;
 	}
 
@@ -92,7 +91,7 @@ public class BinaryTreeServices {
 	}
 
 	/**
-	 * Method postorder to display the BST. lefft, right, root node. Pass the node
+	 * Method postorder to display the BST. left, right, root node. Pass the node
 	 * and then call the method postorder and check left or right
 	 */
 	public void postorder() {
@@ -105,5 +104,21 @@ public class BinaryTreeServices {
 			postorder(r.right);
 			System.out.print(r.data + " ");
 		}
+	}
+
+	/**
+	 * Method size to check the size of the BST 1. If root null then BST is empty
+	 * and will return 0 2. Add the right, left child and the root
+	 */
+	public void size() {
+		System.out.println("\n The size of the tree is: " + sizeAll(root));
+	}
+
+	public int sizeAll(Node root) {
+
+		if (root == null)
+			return 0;
+
+		return sizeAll(root.left) + sizeAll(root.right) + 1;
 	}
 }
